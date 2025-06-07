@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediGuide - Medical Chatbot Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MediGuide</h1>
+            <p>Your AI-Powered Medical Assistant</p>
+        </header>
+
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box">
+                <div class="message system">
+                    <div class="message-content">
+                        <p>Hello! I'm MediGuide, your medical assistant. How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your medical question here...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>MediGuide is an AI assistant and should not replace professional medical advice.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
