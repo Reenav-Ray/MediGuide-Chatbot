@@ -10,9 +10,10 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-Model_Path = os.environ.get("MODEL_PATH", "/home/shree/code/Mediguide/Mediguide/mediguide_checkpoint_epoch2")
+Model_Path = os.environ.get("MODEL_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "model"))
 
 def load_model():
+
     try:
         logger.info(f"Loading model from: {Model_Path}")
         if not os.path.exists(Model_Path):
